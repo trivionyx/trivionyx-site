@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trivionyx Inc. | Enterprise Software, Cloud &amp; Oracle APEX Consulting</title>
+<meta name="description" content="Trivionyx Inc. is a federally incorporated Canadian technology firm delivering custom software development, Oracle APEX engineering, cloud infrastructure, AI automation, and secure platform migrations to enterprise, mid-market, and academic clients worldwide.">
+<meta name="keywords" content="Oracle APEX consulting, Canadian software firm, enterprise cloud migration, AWS consulting, Oracle Cloud Infrastructure, Forms to APEX migration, enterprise AI automation, IT consulting Canada">
+<meta property="og:title" content="Trivionyx Inc. | Enterprise Software, Cloud &amp; Oracle APEX Consulting">
+<meta property="og:description" content="Canadian incorporated. Globally delivered. Custom software, Oracle APEX, cloud infrastructure, and secure migrations for enterprise and academic clients.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%234F46E5'/%3E%3Cstop offset='1' stop-color='%2314B8A6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='50,8 92,88 8,88' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"IBM Plex Sans"', 'sans-serif'],
+        },
+        colors: {
+          brandink: '#0B1120',
+        }
+      }
+    }
+  }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+  body { font-family: 'IBM Plex Sans', sans-serif; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .grad-text {
+    background: linear-gradient(100deg, #818CF8 0%, #2DD4BF 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .services-panel { opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .services-panel.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mobile-panel { max-height: 0; overflow: hidden; transition: max-height .28s ease; }
+  .mobile-panel.is-open { max-height: 900px; }
+  :focus-visible { outline: 2px solid #2DD4BF; outline-offset: 2px; }
+  ::selection { background: rgba(79,70,229,0.35); color: #fff; }
+</style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+<!-- ======================= HEADER ======================= -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#top" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 100 100" class="w-7 h-7" aria-hidden="true">
+          <defs>
+            <linearGradient id="navmark" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#818CF8"/>
+              <stop offset="1" stop-color="#2DD4BF"/>
+            </linearGradient>
+          </defs>
+          <polygon points="50,8 92,88 8,88" fill="url(#navmark)"/>
+        </svg>
+        <span class="font-display font-semibold text-lg text-white tracking-tight">Trivionyx</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        <div class="relative" id="services-dropdown-wrap">
+          <button id="services-dropdown-btn" class="flex items-center gap-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors" aria-expanded="false" aria-controls="services-panel">
+            Services
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </button>
+          <div id="services-panel" class="services-panel absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[640px] bg-white rounded-xl border border-slate-200 shadow-xl p-5 grid grid-cols-2 gap-1">
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="code-2" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Software Development &amp; Architecture</span><span class="block text-xs text-slate-500 mt-0.5">Custom web apps, data modeling, mobile</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="database" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">The Oracle APEX Suite</span><span class="block text-xs text-slate-500 mt-0.5">UI, integrations, utility frameworks</span></span>
+            </a>
+            <a href="#migrations" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="move-right" class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Seamless Migrations</span><span class="block text-xs text-slate-500 mt-0.5">Forms, Excel, and on-prem to cloud</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="brain-circuit" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Enterprise AI &amp; Deep Automation</span><span class="block text-xs text-slate-500 mt-0.5">Integrations, workflows, BI pipelines</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="cloud" class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Cloud &amp; Advanced Databases</span><span class="block text-xs text-slate-500 mt-0.5">OCI, AWS, secure DBA setup</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="compass" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Global PM &amp; IT Consulting</span><span class="block text-xs text-slate-500 mt-0.5">Agile delivery, IT strategy</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="headset" class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">24/7 Managed Support</span><span class="block text-xs text-slate-500 mt-0.5">Continuous monitoring, response</span></span>
+            </a>
+            <a href="#services" class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+              <i data-lucide="graduation-cap" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+              <span><span class="block text-sm font-semibold text-slate-900">Corporate &amp; Academic Training</span><span class="block text-xs text-slate-500 mt-0.5">Bootcamps to mastery programs</span></span>
+            </a>
+          </div>
+        </div>
+        <a href="#migrations" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Migrations</a>
+        <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</a>
+        <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#consultation" class="hidden sm:inline-flex items-center rounded-md bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-5 py-2.5 transition-colors">
+          Book a Consultation
+        </a>
+        <button id="mobile-menu-btn" class="lg:hidden text-slate-200" aria-expanded="false" aria-controls="mobile-panel">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobile-panel" class="mobile-panel lg:hidden">
+      <div class="pb-6 pt-2 flex flex-col gap-1">
+        <a href="#services" class="px-2 py-2.5 text-slate-200 text-sm font-medium border-b border-white/5">Services</a>
+        <a href="#migrations" class="px-2 py-2.5 text-slate-200 text-sm font-medium border-b border-white/5">Migrations</a>
+        <a href="#about" class="px-2 py-2.5 text-slate-200 text-sm font-medium border-b border-white/5">About</a>
+        <a href="#contact" class="px-2 py-2.5 text-slate-200 text-sm font-medium border-b border-white/5">Contact</a>
+        <a href="#consultation" class="mt-3 inline-flex items-center justify-center rounded-md bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ======================= HERO ======================= -->
+<section class="bg-slate-950 pt-40 pb-20 lg:pt-48 lg:pb-28 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <p class="text-teal-400 font-medium text-sm mb-5">Canadian incorporated. Globally delivered.</p>
+      <h1 class="font-display font-semibold text-white text-4xl sm:text-5xl leading-[1.15] tracking-tight">
+        Enterprise software engineering, built in Canada, delivered to clients worldwide.
+      </h1>
+      <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-xl">
+        Trivionyx Inc. is a federally incorporated Canadian technology firm, carrying nearly two decades of combined engineering experience into every engagement. Our team delivers from a decentralized, global base — custom software, Oracle APEX, cloud infrastructure, and AI automation for enterprise, mid-market, and academic clients.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#consultation" class="inline-flex items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-6 py-3.5 transition-colors">
+          Book a Consultation
+        </a>
+        <a href="#services" class="inline-flex items-center justify-center rounded-md border border-slate-700 hover:border-slate-500 text-slate-200 text-sm font-semibold px-6 py-3.5 transition-colors">
+          Explore Our Services
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-8">
+        <svg viewBox="0 0 420 320" class="w-full h-auto" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroLine" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#818CF8"/>
+              <stop offset="1" stop-color="#2DD4BF"/>
+            </linearGradient>
+          </defs>
+          <line x1="70" y1="60" x2="210" y2="150" stroke="url(#heroLine)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="210" y1="150" x2="350" y2="70" stroke="url(#heroLine)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="210" y1="150" x2="130" y2="250" stroke="url(#heroLine)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="210" y1="150" x2="320" y2="240" stroke="url(#heroLine)" stroke-width="1.5" opacity="0.6"/>
+          <line x1="70" y1="60" x2="130" y2="250" stroke="url(#heroLine)" stroke-width="1" opacity="0.25"/>
+          <line x1="350" y1="70" x2="320" y2="240" stroke="url(#heroLine)" stroke-width="1" opacity="0.25"/>
+          <circle cx="210" cy="150" r="9" fill="#2DD4BF"/>
+          <circle cx="70" cy="60" r="6" fill="#818CF8"/>
+          <circle cx="350" cy="70" r="6" fill="#818CF8"/>
+          <circle cx="130" cy="250" r="6" fill="#818CF8"/>
+          <circle cx="320" cy="240" r="6" fill="#818CF8"/>
+          <text x="210" y="178" text-anchor="middle" fill="#CBD5E1" font-size="11" font-family="IBM Plex Sans, sans-serif">Ontario, Canada</text>
+        </svg>
+        <p class="text-center text-xs text-slate-500 mt-2">A distributed delivery model spanning multiple time zones.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= TRUST METRICS BANNER ======================= -->
+<section class="bg-slate-900 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+    <div class="py-10 px-6 text-center">
+      <p class="font-display font-semibold text-white text-3xl sm:text-4xl">Nearly 20</p>
+      <p class="text-slate-400 text-sm mt-2">Years of combined engineering experience</p>
+    </div>
+    <div class="py-10 px-6 text-center">
+      <p class="font-display font-semibold text-white text-3xl sm:text-4xl">CBCA</p>
+      <p class="text-slate-400 text-sm mt-2">Federally incorporated in Canada</p>
+    </div>
+    <div class="py-10 px-6 text-center">
+      <p class="font-display font-semibold text-white text-3xl sm:text-4xl">24/7</p>
+      <p class="text-slate-400 text-sm mt-2">Managed monitoring &amp; support</p>
+    </div>
+    <div class="py-10 px-6 text-center">
+      <p class="font-display font-semibold text-white text-3xl sm:text-4xl">Global</p>
+      <p class="text-slate-400 text-sm mt-2">Delivery across multiple time zones</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CORE VERTICALS ======================= -->
+<section id="services" class="bg-slate-50 py-24 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mb-14">
+      <h2 class="font-display font-semibold text-slate-900 text-3xl sm:text-4xl tracking-tight">Capabilities built for enterprise, mid-market, and academic clients.</h2>
+      <p class="mt-4 text-slate-600 text-lg leading-relaxed">Eight core verticals, each scoped as a fixed engagement with clear deliverables — not an open-ended retainer.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-indigo-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-4">
+          <i data-lucide="code-2" class="w-5 h-5 text-indigo-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Software Development &amp; Architecture</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Custom-engineered applications and system architecture designed around how your business actually operates.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Custom web application development</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Data modeling &amp; schema design</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Custom plugin &amp; module development</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Hybrid &amp; native mobile applications</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-teal-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-4">
+          <i data-lucide="database" class="w-5 h-5 text-teal-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">The Oracle APEX Suite</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Full-lifecycle Oracle APEX engineering, from the database layer up through the interface your users touch daily.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Secure, optimized database connections</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Custom UI design beyond APEX defaults</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>JS library &amp; component integration</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Payment &amp; mailing gateway integration</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-indigo-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-4">
+          <i data-lucide="move-right" class="w-5 h-5 text-indigo-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Seamless Migrations</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">We treat migration as an engineering discipline — where most projects lose data, time, or trust.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Oracle Forms to APEX migration</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Excel &amp; spreadsheet systems to APEX</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>On-premises to cloud transitions</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>A zero-data-loss approach, start to finish</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-teal-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-4">
+          <i data-lucide="brain-circuit" class="w-5 h-5 text-teal-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Enterprise AI &amp; Deep Automation</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">AI integrated where it changes an outcome, not bolted on as a feature checkbox.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Custom AI integrations into existing systems</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Workflow &amp; process automation</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Business intelligence pipelines</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Decision-support tooling on your own data</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-indigo-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-4">
+          <i data-lucide="cloud" class="w-5 h-5 text-indigo-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Cloud &amp; Advanced Databases</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Infrastructure configured for the region your users are in, and the uptime your business depends on.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Oracle Cloud Infrastructure &amp; AWS engineering</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Global hosting configuration</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Secure database administration setup</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Proactive infrastructure monitoring &amp; tuning</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-teal-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-4">
+          <i data-lucide="compass" class="w-5 h-5 text-teal-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Global PM &amp; IT Consulting</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Delivery discipline that holds up across time zones, vendors, and stakeholders.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Agile delivery frameworks</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Turnkey, end-to-end project delivery</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Independent IT strategy &amp; advisory</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Vendor &amp; technical due diligence</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-indigo-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-4">
+          <i data-lucide="headset" class="w-5 h-5 text-indigo-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">24/7 Managed Support</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">Systems fail quietly before they fail loudly. We watch for the first kind.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Continuous server &amp; application monitoring</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Proactive incident response</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Scheduled maintenance &amp; patching</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Direct escalation path, not a ticket queue</li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-slate-200 border-t-4 border-t-teal-500 bg-white p-6">
+        <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-4">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-teal-600"></i>
+        </div>
+        <h3 class="font-display font-semibold text-slate-900 text-base">Corporate &amp; Academic Training</h3>
+        <p class="mt-2 text-sm text-slate-600 leading-relaxed">From a first course in a new platform to a mastery program for an existing team.</p>
+        <ul class="mt-4 space-y-1.5">
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Foundational engineering bootcamps</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Oracle APEX &amp; low-code training tracks</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Enterprise mastery &amp; upskilling programs</li>
+          <li class="flex items-start gap-2 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-teal-600 mt-0.5 shrink-0"></i>Academic partnerships &amp; faculty development</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MIGRATION & INTEGRATION SPOTLIGHT ======================= -->
+<section id="migrations" class="bg-slate-900 py-24 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mb-14">
+      <h2 class="font-display font-semibold text-white text-3xl sm:text-4xl tracking-tight">Migrations are where projects earn or lose trust.</h2>
+      <p class="mt-4 text-slate-400 text-lg leading-relaxed">Every migration path below follows the same discipline: assess the existing system fully, migrate without improvising mid-flight, then validate against the original before anyone calls it done.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-white/10 bg-slate-950/50 p-6">
+        <h3 class="font-display font-semibold text-white text-base mb-5">Oracle Forms to APEX</h3>
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">1</span>Assess</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">2</span>Migrate</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-semibold text-xs">3</span>Validate</span>
+        </div>
+        <p class="mt-5 text-sm text-slate-400 leading-relaxed">Form-by-form logic mapping before a single page is rebuilt in APEX, so business rules survive the move intact.</p>
+      </div>
+
+      <div class="rounded-xl border border-white/10 bg-slate-950/50 p-6">
+        <h3 class="font-display font-semibold text-white text-base mb-5">Excel to APEX</h3>
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">1</span>Assess</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">2</span>Migrate</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-semibold text-xs">3</span>Validate</span>
+        </div>
+        <p class="mt-5 text-sm text-slate-400 leading-relaxed">The spreadsheet's hidden formulas and macros become proper schema, validation, and workflow in a real application.</p>
+      </div>
+
+      <div class="rounded-xl border border-white/10 bg-slate-950/50 p-6">
+        <h3 class="font-display font-semibold text-white text-base mb-5">On-Premises to Cloud</h3>
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">1</span>Assess</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-display font-semibold text-xs">2</span>Migrate</span>
+          <span class="h-px flex-1 bg-white/10 mx-1"></span>
+          <span class="flex flex-col items-center gap-2 flex-1"><span class="w-7 h-7 rounded-full bg-teal-500/20 text-teal-300 flex items-center justify-center font-display font-semibold text-xs">3</span>Validate</span>
+        </div>
+        <p class="mt-5 text-sm text-slate-400 leading-relaxed">Infrastructure, data, and access control re-architected for Oracle Cloud Infrastructure or AWS, not just lifted and shifted.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-10 border-t border-white/10">
+      <h3 class="font-display font-semibold text-white text-lg mb-5">Custom integrations, built around your existing systems</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="inline-flex items-center gap-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"><i data-lucide="plug" class="w-4 h-4 text-teal-400"></i>REST &amp; SOAP API integration</span>
+        <span class="inline-flex items-center gap-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"><i data-lucide="credit-card" class="w-4 h-4 text-teal-400"></i>Payment gateway integration</span>
+        <span class="inline-flex items-center gap-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"><i data-lucide="mail" class="w-4 h-4 text-teal-400"></i>Mailing &amp; notification systems</span>
+        <span class="inline-flex items-center gap-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"><i data-lucide="key-round" class="w-4 h-4 text-teal-400"></i>Third-party authentication</span>
+        <span class="inline-flex items-center gap-2 text-sm text-slate-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"><i data-lucide="link-2" class="w-4 h-4 text-teal-400"></i>Legacy system bridges</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ABOUT ======================= -->
+<section id="about" class="bg-slate-50 py-24 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+    <div>
+      <h2 class="font-display font-semibold text-slate-900 text-3xl sm:text-4xl tracking-tight">A Canadian firm, structured for global delivery from day one.</h2>
+      <p class="mt-5 text-slate-600 text-lg leading-relaxed">Trivionyx Inc. is federally incorporated in Canada under the Canada Business Corporations Act, with its registered office in Ontario. The firm was founded to bring nearly two decades of senior-level software, cloud, and IT consulting experience to organizations that need a dependable technical partner without the overhead of a large agency.</p>
+      <p class="mt-4 text-slate-600 text-lg leading-relaxed">We operate as a decentralized team, built to work across time zones rather than from a single office — serving Canadian organizations, U.S. companies, and clients contracting a Canadian firm internationally, with the invoicing and compliance documentation that cross-border work requires.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <i data-lucide="shield-check" class="w-5 h-5 text-indigo-600 mb-3"></i>
+        <p class="font-display font-semibold text-slate-900 text-sm">Security-first delivery</p>
+        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">OWASP-aligned reviews and secure coding practices on every engagement.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <i data-lucide="file-check-2" class="w-5 h-5 text-teal-600 mb-3"></i>
+        <p class="font-display font-semibold text-slate-900 text-sm">GDPR-aware handling</p>
+        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Data minimization and access control considered at design time.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <i data-lucide="globe" class="w-5 h-5 text-indigo-600 mb-3"></i>
+        <p class="font-display font-semibold text-slate-900 text-sm">Cross-border ready</p>
+        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Invoicing and tax documentation built for Canada/U.S./global work.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <i data-lucide="users" class="w-5 h-5 text-teal-600 mb-3"></i>
+        <p class="font-display font-semibold text-slate-900 text-sm">One point of contact</p>
+        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">The person who scopes the work is the one who delivers it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIAL WALL ======================= -->
+<section id="testimonials" class="bg-white py-24 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mb-10">
+      <h2 class="font-display font-semibold text-slate-900 text-3xl sm:text-4xl tracking-tight">Client feedback</h2>
+      <p class="mt-4 text-slate-600 text-lg leading-relaxed">Trivionyx Inc. is a newly incorporated firm built on nearly two decades of hands-on delivery experience. The cards below are reserved space — real client quotes will replace them as engagements are completed.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6">
+        <i data-lucide="quote" class="w-6 h-6 text-slate-300 mb-4"></i>
+        <p class="text-sm text-slate-500 italic leading-relaxed">This space is reserved for a direct quote from a client, added once an engagement is complete.</p>
+        <p class="mt-5 text-xs font-medium text-slate-400">— Client name, title &amp; company (to be added)</p>
+      </div>
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6">
+        <i data-lucide="quote" class="w-6 h-6 text-slate-300 mb-4"></i>
+        <p class="text-sm text-slate-500 italic leading-relaxed">This space is reserved for a direct quote from a client, added once an engagement is complete.</p>
+        <p class="mt-5 text-xs font-medium text-slate-400">— Client name, title &amp; company (to be added)</p>
+      </div>
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6">
+        <i data-lucide="quote" class="w-6 h-6 text-slate-300 mb-4"></i>
+        <p class="text-sm text-slate-500 italic leading-relaxed">This space is reserved for a direct quote from a client, added once an engagement is complete.</p>
+        <p class="mt-5 text-xs font-medium text-slate-400">— Client name, title &amp; company (to be added)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONSULTATION REQUEST FORM ======================= -->
+<section id="consultation" class="bg-slate-950 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 sm:p-10">
+      <h2 class="font-display font-semibold text-slate-900 text-2xl sm:text-3xl tracking-tight">Book a consultation</h2>
+      <p class="mt-3 text-slate-600">Tell us what you're building or what needs fixing. We'll reply directly — no sales queue.</p>
+
+      <form id="consultation-form" class="mt-8 space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="full-name" class="block text-sm font-medium text-slate-700 mb-1.5">Full name</label>
+            <input type="text" id="full-name" name="full-name" required class="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none">
+          </div>
+          <div>
+            <label for="corp-email" class="block text-sm font-medium text-slate-700 mb-1.5">Corporate email</label>
+            <input type="email" id="corp-email" name="corp-email" required class="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none">
+          </div>
+        </div>
+        <div>
+          <label for="company" class="block text-sm font-medium text-slate-700 mb-1.5">Company</label>
+          <input type="text" id="company" name="company" class="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label for="vertical" class="block text-sm font-medium text-slate-700 mb-1.5">Selected vertical</label>
+          <select id="vertical" name="vertical" class="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none bg-white">
+            <option>Software Development &amp; Architecture</option>
+            <option>The Oracle APEX Suite</option>
+            <option>Seamless Migrations</option>
+            <option>Enterprise AI &amp; Deep Automation</option>
+            <option>Cloud &amp; Advanced Databases</option>
+            <option>Global PM &amp; IT Consulting</option>
+            <option>24/7 Managed Support</option>
+            <option>Corporate &amp; Academic Training</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label for="scope" class="block text-sm font-medium text-slate-700 mb-1.5">Project scope</label>
+          <textarea id="scope" name="scope" rows="4" required class="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none"></textarea>
+        </div>
+        <button type="submit" class="w-full inline-flex items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-6 py-3.5 transition-colors">
+          Send request
+        </button>
+        <p id="form-status" class="text-xs text-slate-500 text-center hidden">Opening your email client to send this request…</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer id="contact" class="bg-slate-950 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <div>
+      <a href="#top" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 100 100" class="w-6 h-6" aria-hidden="true"><polygon points="50,8 92,88 8,88" fill="#475569"/></svg>
+        <span class="font-display font-semibold text-slate-300">Trivionyx Inc.</span>
+      </a>
+      <p class="mt-4 text-sm text-slate-500 leading-relaxed">Enterprise software, cloud, and Oracle APEX engineering, delivered by a decentralized team working across time zones.</p>
+      <div class="flex items-center gap-4 mt-5">
+        <a href="#" class="text-slate-500 hover:text-slate-300 transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        <a href="#" class="text-slate-500 hover:text-slate-300 transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+        <a href="#" class="text-slate-500 hover:text-slate-300 transition-colors" aria-label="Twitter / X"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-slate-300 text-sm mb-4">Services</p>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li><a href="#services" class="hover:text-slate-300 transition-colors">Software Development</a></li>
+        <li><a href="#services" class="hover:text-slate-300 transition-colors">Oracle APEX Suite</a></li>
+        <li><a href="#migrations" class="hover:text-slate-300 transition-colors">Migrations</a></li>
+        <li><a href="#services" class="hover:text-slate-300 transition-colors">Enterprise AI &amp; Automation</a></li>
+        <li><a href="#services" class="hover:text-slate-300 transition-colors">Cloud &amp; Databases</a></li>
+        <li><a href="#services" class="hover:text-slate-300 transition-colors">Training</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-slate-300 text-sm mb-4">Company</p>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li><a href="#about" class="hover:text-slate-300 transition-colors">About</a></li>
+        <li><a href="#consultation" class="hover:text-slate-300 transition-colors">Book a Consultation</a></li>
+        <li><a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-display font-semibold text-slate-300 text-sm mb-4">Contact</p>
+      <ul class="space-y-2.5 text-sm text-slate-500">
+        <li class="flex items-start gap-2"><i data-lucide="mail" class="w-4 h-4 mt-0.5 shrink-0"></i>hello@trivionyx.com</li>
+        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0"></i>Registered office: Ontario, Canada</li>
+        <li class="flex items-start gap-2"><i data-lucide="globe-2" class="w-4 h-4 mt-0.5 shrink-0"></i>Serving Canada, the United States, and international clients remotely</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs text-slate-500">&copy; <span id="year"></span> Trivionyx Inc. All rights reserved. Federally incorporated under the Canada Business Corporations Act.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobilePanel = document.getElementById('mobile-panel');
+  mobileBtn.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('is-open');
+    mobileBtn.setAttribute('aria-expanded', isOpen);
+    mobileBtn.innerHTML = isOpen ? '<i data-lucide="x" class="w-6 h-6"></i>' : '<i data-lucide="menu" class="w-6 h-6"></i>';
+    lucide.createIcons();
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobilePanel.classList.remove('is-open');
+    mobileBtn.setAttribute('aria-expanded', 'false');
+    mobileBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+    lucide.createIcons();
+  }));
+
+  // Services dropdown toggle
+  const dropdownWrap = document.getElementById('services-dropdown-wrap');
+  const dropdownBtn = document.getElementById('services-dropdown-btn');
+  const dropdownPanel = document.getElementById('services-panel');
+  dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdownPanel.classList.toggle('is-open');
+    dropdownBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', (e) => {
+    if (!dropdownWrap.contains(e.target)) {
+      dropdownPanel.classList.remove('is-open');
+      dropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  dropdownPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    dropdownPanel.classList.remove('is-open');
+    dropdownBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Consultation form -> mailto handoff (static site, no backend)
+  const form = document.getElementById('consultation-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('full-name').value;
+    const email = document.getElementById('corp-email').value;
+    const company = document.getElementById('company').value;
+    const vertical = document.getElementById('vertical').value;
+    const scope = document.getElementById('scope').value;
+    const subject = encodeURIComponent('Consultation request: ' + name + (company ? ' (' + company + ')' : ''));
+    const body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Company: ' + company + '\n' +
+      'Selected vertical: ' + vertical + '\n\n' +
+      'Project scope:\n' + scope
+    );
+    status.classList.remove('hidden');
+    window.location.href = 'mailto:hello@trivionyx.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
